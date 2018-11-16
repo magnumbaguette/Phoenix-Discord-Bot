@@ -1,29 +1,29 @@
 /**
- * A ping pong boredacted
+ * A ping pong bot, whenever you send "ping", it replies "pong".
  */
 
-// Imporedacted
-redacted
+// Import the discord.js module
+const Discord = require('discord.js');
 
-// Credacted
-redacted
+// Create an instance of a Discord client
+const client = new Discord.Client();
 
 /**
- * Thredacted
- * redacted
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
  */
-redacted
-  redacted
+client.on('ready', () => {
+  console.log('I am ready!');
 });
 
-// Credacted
-redacted
-  // If redacted
-  if (mredacted
-    // Sredacted
-    mredacted
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+    message.channel.send('pong');
   }
 });
 
-// Log ouredacted
+// Log our bot in using the token from https://discordapp.com/developers/applications/me
 redacted
